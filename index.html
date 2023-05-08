@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<br><br><br>
+    <section class="intro">
+      <h1 class="text-center text-muted mt-2" style="letter-spacing:1px; font-weight: 700;"><div id="TOGGLEWORDS">
+            
+           
+               YOUR STUPID GIRLFRIEND
+            </h1>
+</div>
+
+
+
+<p class="divided text-uppercase mb-2 mt-1 text-center" style="display: flex; align-items: center; font-size: 25px; letter-spacing: 0.5px; font-weight: 600px;">
+ 
+  <span class="divider" style="flex-grow: 1; border-bottom: 1px solid gray; margin: 8px; opacity: 0.4;"></span> Backstory 
+  <span class="divider" style="flex-grow: 1; border-bottom: 1px solid gray; margin: 8px; opacity: 0.4;"></span>
+  
+           <p class="text-muted">  Big Boobs Saburou</p>
+
+           <p class="text-muted"> Donec tristique in turpis et laoreet. Nam tincidunt consequat vehicula. Mauris sit amet rutrum enim, vitae faucibus lectus. Ut varius quis nisl ac tempus. Curabitur cursus augue lacus, eget consectetur arcu faucibus vel. </p>
+
+ 
+  
+        <div class="btn-group">
+          <a href="file0.html" class="btn btn-accent">Gallery</a>
+          <a href="#" class="btn btn-secondary">More info</a>
+        </div>
+      </section>
+
+      
+      <button onclick="myFunction()" id="dark-mode-toggle" class="dark-mode-toggle">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+          <path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)" />
+        </svg>
+      </button>
+
+<div class="container p-0" style=" box-shadow: 0px 0px 12px rgba(0,0,0,.12); max-width: 1170px; border-top-left-radius: 13px;  border-top-right-radius: 13px;  border-bottom-right-radius: 13px; border-bottom-left-radius: 13px;">
+
+   
+                     
+ 
+       
+ 
+      
+<Style>
+    @import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+
+
+
+:root {
+  --clr-light: #ffffff;
+  --clr-dark: #f3b3b7;
+  --clr-primary: #ffffff;
+  --clr-secondary: #ffbdbd;
+  --clr-accent: #ae5d6d;
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+
+  --ff-title: "Playfair Display", serif;
+  --ff-body: "Assistant", sans-serif;
+}
+
+.darkmode {
+  --clr-light: #5d3641;
+  --clr-dark: #362032;
+  --clr-primary: #020323;
+  --clr-secondary: #000010;
+  --clr-accent: #000000;
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--ff-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: calc(3rem + 7vw);
+  font-family: var(--ff-title);
+  margin: 0 0 0.25em;
+  line-height: 1;
+}
+
+.subtitle {
+  max-width: 600px;
+}
+
+.btn-group {
+  margin: 2em 0;
+  display: relative;
+}
+
+.btn {
+  padding: 1em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn-secondary {
+  background: var(--foreground);
+  color: var(--background);
+  
+}
+
+.btn-accent {
+  background: var(--clr-accent);
+  color: var(--foreground);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: var(--foreground) 2px solid;
+  left: -4px;
+  top: 4px;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.intro {
+  height: 80vh;
+
+  display: grid;
+  grid-template-columns: minmax(2em, 1fr) minmax(80vw, 860px) minmax(2em, 1fr);
+  background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+ 
+}
+
+.intro > * {
+  grid-column: 2 / 3;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.click-here {
+
+  width: 100px;
+  right: 1.5em;
+  position: absolute;
+  top: 3em;
+}
+
+</Style>
+<script>
+    let darkMode = localStorage.getItem("darkMode");
+
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+function myFunction() {
+  var x = document.getElementById("TOGGLEWORDS");
+  if (x.innerHTML ===  
+               "BIG BOOBS SABUROU" ) 
+        {
+    x.innerHTML = 'YOUR STUPID GIRLFRIEND';
+  } 
+  
+  else {
+    x.innerHTML = 
+               "BIG BOOBS SABUROU" ;
+  }
+}
+
+
+
+
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add("darkmode");
+  // 2. Update darkMode in localStorage
+  localStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove("darkmode");
+  // 2. Update darkMode in localStorage
+  localStorage.setItem("darkMode", null);
+};
+
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === "enabled") {
+  enableDarkMode();
+}
+
+// When someone clicks the button
+darkModeToggle.addEventListener("click", () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem("darkMode");
+
+  // if it not current enabled, enable it
+  if (darkMode !== "enabled") {
+    enableDarkMode();
+    // if it has been enabled, turn it off
+  } else {
+    disableDarkMode();
+  }
+});
+
+function TOGGLEWORDS() {
+        var img = document.getElementById('imgplus').src;
+        if (img.indexOf('Plus.gif')!=-1) {
+            document.getElementById('imgplus').src  = 'sketchysketchysketchy.PNG';
+        }
+         else {
+           document.getElementById('imgplus').src = 'Untitled379_20220827203001.PNG';
+       }
+
+    }
+
+    </script>
