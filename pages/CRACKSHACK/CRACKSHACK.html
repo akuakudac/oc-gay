@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="screen"> 
+    
+    <img src="scanlines.png" alt="" id="scan">
+    <a href="loading.html">
+    <img src="bezel.png" alt="" id="bezel">
+    </a>
+    <div id= 'content'>
+   
+                        
+ <h2>WELCOME TO THE CRACK SHACK</h2>
+ <p>" A virtual world where you can upload your mind "</p>
+ <p>click to continue..</p>
+      
+    </div>
+  </div>
+
+</body>
+</html>
+
+<style>
+  body{
+    background-color: black;
+    font-family: VT323;
+  }
+  #screen{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(#0026ff, #041607);
+    font-family: VT323;
+
+  }
+  #scan{
+    opacity: 70%;
+  }
+  #scan, #bezel {
+    position: absolute;
+    width: 100%;
+    height:100% ;
+    top: 0;
+    left: 0;
+  }
+  #content{
+    padding: 70px;
+    font-family: VT323;
+    color: lightcyan;
+    text-shadow: 0 0 10px cyan;
+
+
+  }
+  p, h2 {
+    overflow: hidden;
+  
+  white-space: nowrap;
+  animation:  control-width 3s steps(30) 2s forwards, blink 0.7s infinite;
+  animation-delay: 0ms;
+}
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 410px;
+  }
+}
+@keyframes blink {
+  from {
+    border-right-color: var(--main-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+</style>
