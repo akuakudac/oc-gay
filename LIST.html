@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART MANAGER</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #todoList { margin-top: 20px; }
+        .todo-item { display: flex; justify-content: space-between; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+
+    <section id="wishlist">
+        <h2>Wishlist</h2>
+        
+        <ul>
+            <li>Pride art: <span class="description">need</span></li>
+            <li>Guns:<span class="description">need</span></li>
+            <li>Gore: <span class="description">always looking</span></li>
+            <li>Animation of potty mouth and crybaby riding a motorbike: <span class="description">still looking</span></li>
+            <li>90s anime style of potty mouth and crybaby  <span class="description">still looking</span></li>
+        </ul>
+    </section>
+    <h1>Commission manager</h1>
+    <input type="text" id="todoInput" placeholder="Artist/price">
+    <input type="date" id="dateInput">
+    <button onclick="addTodo()">Add </button>
+    <div id="todoList"></div>
+
+    <script>
+        const todoList = JSON.parse(localStorage.getItem('todos')) || [];
+
+        function renderTodos() {
+            const list = document.getElementById('todoList');
+            list.innerHTML = '';
+            todoList.forEach((todo, index) => {
+                const item = document.createElement('div');
+                item.className = 'todo-item';
+                item.innerHTML = `${todo.task} - ${todo.date} <button onclick="deleteTodo(${index})">Delete</button>`;
+                list.appendChild(item);
+            });
+        }
+
+        function addTodo() {
+            const taskInput = document.getElementById('todoInput');
+            const dateInput = document.getElementById('dateInput');
+            if (taskInput.value && dateInput.value) {
+                todoList.push({ task: taskInput.value, date: dateInput.value });
+                localStorage.setItem('todos', JSON.stringify(todoList));
+                taskInput.value = '';
+                dateInput.value = '';
+                renderTodos();
+            }
+        }
+
+        function deleteTodo(index) {
+            todoList.splice(index, 1);
+            localStorage.setItem('todos', JSON.stringify(todoList));
+            renderTodos();
+        }
+
+        window.onload = renderTodos;
+    </script>
+</body>
+</html>
