@@ -1,0 +1,254 @@
+# Image Gallery
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: auto ;
+            height: 200px;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <!-- Repeat this img tag for 140 images -->
+
+    
+    <img src="image1.png" alt="Image 1" onclick="openModal();currentSlide(1)">
+<img src="image2.png" alt="Image 2" onclick="openModal();currentSlide(2)">
+<img src="image3.png" alt="Image 3" onclick="openModal();currentSlide(3)">
+<img src="image4.png" alt="Image 4" onclick="openModal();currentSlide(4)">
+<img src="image5.png" alt="Image 5" onclick="openModal();currentSlide(5)">
+<img src="image6.png" alt="Image 6" onclick="openModal();currentSlide(6)">
+<img src="image7.png" alt="Image 7" onclick="openModal();currentSlide(7)">
+<img src="image8.png" alt="Image 8" onclick="openModal();currentSlide(8)">
+<img src="image9.png" alt="Image 9" onclick="openModal();currentSlide(9)">
+<img src="image10.png" alt="Image 10" onclick="openModal();currentSlide(10)">
+<img src="image11.png" alt="Image 11" onclick="openModal();currentSlide(11)">
+<img src="image12.png" alt="Image 12" onclick="openModal();currentSlide(12)">
+<img src="image13.png" alt="Image 13" onclick="openModal();currentSlide(13)">
+<img src="image14.png" alt="Image 14" onclick="openModal();currentSlide(14)">
+<img src="image15.png" alt="Image 15" onclick="openModal();currentSlide(15)">
+<img src="image16.png" alt="Image 16" onclick="openModal();currentSlide(16)">
+<img src="image17.png" alt="Image 17" onclick="openModal();currentSlide(17)">
+<img src="image18.png" alt="Image 18" onclick="openModal();currentSlide(18)">
+<img src="image19.png" alt="Image 19" onclick="openModal();currentSlide(19)">
+<img src="image20.png" alt="Image 20" onclick="openModal();currentSlide(20)">
+<img src="image21.png" alt="Image 21" onclick="openModal();currentSlide(21)">
+<img src="image22.png" alt="Image 22" onclick="openModal();currentSlide(22)">
+<img src="image23.png" alt="Image 23" onclick="openModal();currentSlide(23)">
+<img src="image24.png" alt="Image 24" onclick="openModal();currentSlide(24)">
+<img src="image25.png" alt="Image 25" onclick="openModal();currentSlide(25)">
+<img src="image26.png" alt="Image 26" onclick="openModal();currentSlide(26)">
+<img src="image27.png" alt="Image 27" onclick="openModal();currentSlide(27)">
+<img src="image28.png" alt="Image 28" onclick="openModal();currentSlide(28)">
+<img src="image29.png" alt="Image 29" onclick="openModal();currentSlide(29)">
+<img src="image30.png" alt="Image 30" onclick="openModal();currentSlide(30)">
+<img src="image31.png" alt="Image 31" onclick="openModal();currentSlide(31)">
+<img src="image32.png" alt="Image 32" onclick="openModal();currentSlide(32)">
+<img src="image33.png" alt="Image 33" onclick="openModal();currentSlide(33)">
+<img src="image34.png" alt="Image 34" onclick="openModal();currentSlide(34)">
+<img src="image35.png" alt="Image 35" onclick="openModal();currentSlide(35)">
+<img src="image36.png" alt="Image 36" onclick="openModal();currentSlide(36)">
+<img src="image37.png" alt="Image 37" onclick="openModal();currentSlide(37)">
+<img src="image38.png" alt="Image 38" onclick="openModal();currentSlide(38)">
+<img src="image39.png" alt="Image 39" onclick="openModal();currentSlide(39)">
+<img src="image40.png" alt="Image 40" onclick="openModal();currentSlide(40)">
+<img src="image41.png" alt="Image 41" onclick="openModal();currentSlide(41)">
+<img src="image42.png" alt="Image 42" onclick="openModal();currentSlide(42)">
+<img src="image43.png" alt="Image 43" onclick="openModal();currentSlide(43)">
+<img src="image44.png" alt="Image 44" onclick="openModal();currentSlide(44)">
+<img src="image45.png" alt="Image 45" onclick="openModal();currentSlide(45)">
+<img src="image46.png" alt="Image 46" onclick="openModal();currentSlide(46)">
+<img src="image47.png" alt="Image 47" onclick="openModal();currentSlide(47)">
+<img src="image48.png" alt="Image 48" onclick="openModal();currentSlide(48)">
+<img src="image49.png" alt="Image 49" onclick="openModal();currentSlide(49)">
+<img src="image50.png" alt="Image 50" onclick="openModal();currentSlide(50)">
+<img src="image51.png" alt="Image 51" onclick="openModal();currentSlide(51)">
+<img src="image52.png" alt="Image 52" onclick="openModal();currentSlide(52)">
+<img src="image53.png" alt="Image 53" onclick="openModal();currentSlide(53)">
+<img src="image54.png" alt="Image 54" onclick="openModal();currentSlide(54)">
+<img src="image55.png" alt="Image 55" onclick="openModal();currentSlide(55)">
+<img src="image56.png" alt="Image 56" onclick="openModal();currentSlide(56)">
+<img src="image57.png" alt="Image 57" onclick="openModal();currentSlide(57)">
+<img src="image58.png" alt="Image 58" onclick="openModal();currentSlide(58)">
+<img src="image59.png" alt="Image 59" onclick="openModal();currentSlide(59)">
+<img src="image60.png" alt="Image 60" onclick="openModal();currentSlide(60)">
+<img src="image61.png" alt="Image 61" onclick="openModal();currentSlide(61)">
+<img src="image62.png" alt="Image 62" onclick="openModal();currentSlide(62)">
+<img src="image63.png" alt="Image 63" onclick="openModal();currentSlide(63)">
+<img src="image64.png" alt="Image 64" onclick="openModal();currentSlide(64)">
+<img src="image65.png" alt="Image 65" onclick="openModal();currentSlide(65)">
+<img src="image66.png" alt="Image 66" onclick="openModal();currentSlide(66)">
+<img src="image67.png" alt="Image 67" onclick="openModal();currentSlide(67)">
+<img src="image68.png" alt="Image 68" onclick="openModal();currentSlide(68)">
+<img src="image69.png" alt="Image 69" onclick="openModal();currentSlide(69)">
+<img src="image70.png" alt="Image 70" onclick="openModal();currentSlide(70)">
+<img src="image71.png" alt="Image 71" onclick="openModal();currentSlide(71)">
+<img src="image72.png" alt="Image 72" onclick="openModal();currentSlide(72)">
+<img src="image73.png" alt="Image 73" onclick="openModal();currentSlide(73)">
+<img src="image74.png" alt="Image 74" onclick="openModal();currentSlide(74)">
+<img src="image75.png" alt="Image 75" onclick="openModal();currentSlide(75)">
+<img src="image76.png" alt="Image 76" onclick="openModal();currentSlide(76)">
+<img src="image77.png" alt="Image 77" onclick="openModal();currentSlide(77)">
+<img src="image78.png" alt="Image 78" onclick="openModal();currentSlide(78)">
+<img src="image79.png" alt="Image 79" onclick="openModal();currentSlide(79)">
+<img src="image80.png" alt="Image 80" onclick="openModal();currentSlide(80)">
+<img src="image81.png" alt="Image 81" onclick="openModal();currentSlide(81)">
+<img src="image82.png" alt="Image 82" onclick="openModal();currentSlide(82)">
+<img src="image83.png" alt="Image 83" onclick="openModal();currentSlide(83)">
+<img src="image84.png" alt="Image 84" onclick="openModal();currentSlide(84)">
+<img src="image85.png" alt="Image 85" onclick="openModal();currentSlide(85)">
+<img src="image86.png" alt="Image 86" onclick="openModal();currentSlide(86)">
+<img src="image87.png" alt="Image 87" onclick="openModal();currentSlide(87)">
+<img src="image88.png" alt="Image 88" onclick="openModal();currentSlide(88)">
+<img src="image89.png" alt="Image 89" onclick="openModal();currentSlide(89)">
+<img src="image90.png" alt="Image 90" onclick="openModal();currentSlide(90)">
+<img src="image91.png" alt="Image 91" onclick="openModal();currentSlide(91)">
+<img src="image92.png" alt="Image 92" onclick="openModal();currentSlide(92)">
+<img src="image93.png" alt="Image 93" onclick="openModal();currentSlide(93)">
+<img src="image94.png" alt="Image 94" onclick="openModal();currentSlide(94)">
+<img src="image95.png" alt="Image 95" onclick="openModal();currentSlide(95)">
+<img src="image96.png" alt="Image 96" onclick="openModal();currentSlide(96)">
+<img src="image97.png" alt="Image 97" onclick="openModal();currentSlide(97)">
+<img src="image98.png" alt="Image 98" onclick="openModal();currentSlide(98)">
+<img src="image99.png" alt="Image 99" onclick="openModal();currentSlide(99)">
+<img src="image100.png" alt="Image 100" onclick="openModal();currentSlide(100)">
+<img src="image101.png" alt="Image 101" onclick="openModal();currentSlide(101)">
+<img src="image102.png" alt="Image 102" onclick="openModal();currentSlide(102)">
+<img src="image103.png" alt="Image 103" onclick="openModal();currentSlide(103)">
+<img src="image104.png" alt="Image 104" onclick="openModal();currentSlide(104)">
+<img src="image105.png" alt="Image 105" onclick="openModal();currentSlide(105)">
+<img src="image106.png" alt="Image 106" onclick="openModal();currentSlide(106)">
+<img src="image107.png" alt="Image 107" onclick="openModal();currentSlide(107)">
+<img src="image108.png" alt="Image 108" onclick="openModal();currentSlide(108)">
+<img src="image109.png" alt="Image 109" onclick="openModal();currentSlide(109)">
+<img src="image110.png" alt="Image 110" onclick="openModal();currentSlide(110)">
+<img src="image111.png" alt="Image 111" onclick="openModal();currentSlide(111)">
+<img src="image112.png" alt="Image 112" onclick="openModal();currentSlide(112)">
+<img src="image113.png" alt="Image 113" onclick="openModal();currentSlide(113)">
+<img src="image114.png" alt="Image 114" onclick="openModal();currentSlide(114)">
+<img src="image115.png" alt="Image 115" onclick="openModal();currentSlide(115)">
+<img src="image116.png" alt="Image 116" onclick="openModal();currentSlide(116)">
+<img src="image117.png" alt="Image 117" onclick="openModal();currentSlide(117)">
+<img src="image118.png" alt="Image 118" onclick="openModal();currentSlide(118)">
+<img src="image119.png" alt="Image 119" onclick="openModal();currentSlide(119)">
+<img src="image120.png" alt="Image 120" onclick="openModal();currentSlide(120)">
+<img src="image121.png" alt="Image 121" onclick="openModal();currentSlide(121)">
+<img src="image122.png" alt="Image 122" onclick="openModal();currentSlide(122)">
+<img src="image123.png" alt="Image 123" onclick="openModal();currentSlide(123)">
+<img src="image124.png" alt="Image 124" onclick="openModal();currentSlide(124)">
+<img src="image125.png" alt="Image 125" onclick="openModal();currentSlide(125)">
+<img src="image126.png" alt="Image 126" onclick="openModal();currentSlide(126)">
+<img src="image127.png" alt="Image 127" onclick="openModal();currentSlide(127)">
+<img src="image128.png" alt="Image 128" onclick="openModal();currentSlide(128)">
+<img src="image129.png" alt="Image 129" onclick="openModal();currentSlide(129)">
+<img src="image130.png" alt="Image 130" onclick="openModal();currentSlide(130)">
+<img src="image131.png" alt="Image 131" onclick="openModal();currentSlide(131)">
+<img src="image132.png" alt="Image 132" onclick="openModal();currentSlide(132)">
+<img src="image133.png" alt="Image 133" onclick="openModal();currentSlide(133)">
+<img src="image134.png" alt="Image 134" onclick="openModal();currentSlide(134)">
+<img src="image135.png" alt="Image 135" onclick="openModal();currentSlide(135)">
+<img src="image136.png" alt="Image 136" onclick="openModal();currentSlide(136)">
+<img src="image137.png" alt="Image 137" onclick="openModal();currentSlide(137)">
+<img src="image138.png" alt="Image 138" onclick="openModal();currentSlide(138)">
+<img src="image139.png" alt="Image 139" onclick="openModal();currentSlide(139)">
+<img src="image140.png" alt="Image 140" onclick="openModal();currentSlide(140)">
+
+    <!-- Add more images up to 140 -->
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    var slideIndex = 1;
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("gallery")[0].getElementsByTagName("img");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        document.getElementById("img01").src = slides[slideIndex - 1].src;
+    }
+</script>
+
+</body>
+</html>
