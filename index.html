@@ -81,7 +81,7 @@
     <!-- Repeat this img tag for 140 images -->
 
     
-    <img src="Image1.png" alt="Image 1" onclick="openModal();currentSlide(1)">
+<img src="Image1.png" alt="Image 1" onclick="openModal();currentSlide(1)">
 <img src="Image2.png" alt="Image 2" onclick="openModal();currentSlide(2)">
 <img src="Image3.png" alt="Image 3" onclick="openModal();currentSlide(3)">
 <img src="Image4.png" alt="Image 4" onclick="openModal();currentSlide(4)">
@@ -92,10 +92,10 @@
 <img src="Image9.png" alt="Image 9" onclick="openModal();currentSlide(9)">
 <img src="Image10.png" alt="Image 10" onclick="openModal();currentSlide(10)">
 <img src="Image11.png" alt="Image 11" onclick="openModal();currentSlide(11)">
-<img src="Image12.png" alt="Image 12" onclick="openModal();currentSlide(12)">
-<img src="Image13.png" alt="Image 13" onclick="openModal();currentSlide(13)">
-<img src="Image14.png" alt="Image 14" onclick="openModal();currentSlide(14)">
-<img src="Image15.png" alt="Image 15" onclick="openModal();currentSlide(15)">
+<img src="Image12.png" alt="Image 12" onclick="openModal();currentSlide(12)" style="filter: blur(5px);">
+<img src="Image13.png" alt="Image 13" onclick="openModal();currentSlide(13)" style="filter: blur(5px);">
+<img src="Image14.png" alt="Image 14" onclick="openModal();currentSlide(14)" style="filter: blur(5px);">
+<img src="Image15.png" alt="Image 15" onclick="openModal();currentSlide(15)" style="filter: blur(5px);">
 <img src="Image16.png" alt="Image 16" onclick="openModal();currentSlide(16)">
 <img src="Image17.png" alt="Image 17" onclick="openModal();currentSlide(17)">
 <img src="Image18.png" alt="Image 18" onclick="openModal();currentSlide(18)">
@@ -220,8 +220,13 @@
 <img src="Image137.png" alt="Image 137" onclick="openModal();currentSlide(137)">
 <img src="Image138.png" alt="Image 138" onclick="openModal();currentSlide(138)">
 <img src="Image139.png" alt="Image 139" onclick="openModal();currentSlide(139)">
-<img src="Image140.png" alt="Image 140" onclick="openModal();currentSlide(140)">
-    <!-- Add more images up to 140 -->
+<img src="Image140.png" alt="Censored Image" style="filter: blur(5px); onclick="openModal();currentSlide(140)">
+
+
+
+
+<button onclick="toggleCensor()">SEE NSFW</button>
+ 
 </div>
 
 <div id="myModal" class="modal">
@@ -252,6 +257,13 @@
         if (n < 1) {slideIndex = slides.length}
         document.getElementById("img01").src = slides[slideIndex - 1].src;
     }
+
+
+
+
+
+
+
 </script>
 
 </body>
